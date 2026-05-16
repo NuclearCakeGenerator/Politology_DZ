@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Собрать LaTeX через Docker",
+            "type": "shell",
+            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace blang/latex pdflatex main.tex",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

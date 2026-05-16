@@ -1,0 +1,57 @@
+\documentclass[a4paper, 14pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage"geometry"
+\geometry{left=30mm, right=10mm, top=20mm, bottom=20mm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{indentfirst} 
+
+\begin{document}
+
+% Титульный лист (можно оставить прямо здесь или вынести в src/title.tex)
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        {\large МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ}\\
+        \vspace*{2cm}
+        {\Large \bf РЕФЕРАТ}\\
+        \vspace*{0.5cm}
+        {\large по дисциплине «Политология»}\\
+        \vspace*{1.5cm}
+        {\Large \bf Тема: «Истоки становления политической культуры»}\\
+    \end{center}
+    \vfill
+    \begin{flushright}
+        {\large Выполнил: студент \_\_\_\_\_\_\_\_}\\
+        \vfill
+    \end{flushright}
+    \begin{center}{\large 2026}\end{center}
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\newpage
+
+% Подключение модулей (файлов)
+\input{src/introduction.tex}
+
+\newpage
+\section{Глава 1. Теоретико-методологические основы исследования политической культуры}
+\input{src/chapter1/section1_1.tex}
+\input{src/chapter1/section1_2.tex}
+\input{src/chapter1/section1_3.tex}
+
+\newpage
+\section{Глава 2. Истоки и эволюция политической культуры}
+\input{src/chapter2/section2_1.tex}
+\input{src/chapter2/section2_2.tex}
+\input{src/chapter2/section2_3.tex}
+
+\newpage
+\input{src/conclusion.tex}
+
+\newpage
+\input{src/references.tex}
+
+\end{document}
