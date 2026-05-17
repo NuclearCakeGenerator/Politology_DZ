@@ -61,16 +61,40 @@
     \vspace*{3cm}
 
     \begin{flushright}
-        \begin{minipage}{1.0\textwidth}
-            {\large Студент ИУ7-42Б М.А. Кузнецов}\\
-            \makebox[2.3cm]{} {\footnotesize (Группа)} \makebox[2.7cm]{} {\footnotesize (И.О. Фамилия)}\\
-            \vspace*{0.2cm}
-            {\large \makebox[2.3cm]{} \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}\\
-            \makebox[3.5cm]{} {\footnotesize (Подпись, дата)}\\
-            \vspace*{0.4cm}
-            {\large Руководитель домашнего задания}\\
-            {\large И.К. Харичкин}\\
-            \makebox[2.3cm]{} {\footnotesize (Подпись, дата)} \makebox[1.8cm]{} {\footnotesize (И.О. Фамилия)}\\
+        \begin{minipage}{1\textwidth}
+            \large
+            \setstretch{1.0} % Переключаемся на одинарный интервал для блока подписей
+            
+            % --- СТРОКА СТУДЕНТА ---
+            \small
+            Студент 
+            \begin{tabular}[t]{c}
+                ИУ7-42Б \\
+                {\footnotesize (Группа)}
+            \end{tabular}
+            \hfill
+            \begin{tabular}[t]{p{3.5cm}}
+                \underline{\hspace{3.5cm}} \\
+                \centering\footnotesize (Подпись, дата)
+            \end{tabular}
+            \begin{tabular}[t]{r}
+                М.А. Кузнецов \\
+                {\footnotesize (И.О. Фамилия)}
+            \end{tabular}
+
+            \vspace*{1.0cm} % Отступ между студентом и руководителем
+
+            % --- СТРОКА РУКОВОДИТЕЛЯ ---
+            Руководитель домашнего задания 
+            \hfill
+            \begin{tabular}[t]{p{3.5cm}}
+                \underline{\hspace{3.5cm}} \\
+                \centering\footnotesize (Подпись, дата)
+            \end{tabular}
+            \begin{tabular}[t]{r}
+                И.К. Харичкин \\
+                \footnotesize (И.О. Фамилия)
+            \end{tabular}
         \end{minipage}
     \end{flushright}
 
