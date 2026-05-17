@@ -2,14 +2,35 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Собрать LaTeX через Docker",
+            "label": "Собрать реферат в Docker (Latexmk)",
             "type": "shell",
-            "command": "docker run --rm -v \"${workspaceFolder}:/workspace\" -w /workspace blang/latex pdflatex main.tex",
+            "command": "docker",
+            "args": [
+                "run",
+                "--rm",
+                "-v",
+                "${workspaceFolder}:/data",
+                "texlive/texlive:latest", // Поменяли образ на официальный
+                "latexmk",
+                "-pdf",
+                "-interaction=nonstopmode",
+                "-synctex=1",
+                "-cd",
+                "/data/main.tex"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": []
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
         }
     ]
 }
