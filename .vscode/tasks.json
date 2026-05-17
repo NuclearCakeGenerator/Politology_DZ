@@ -16,7 +16,7 @@
                 "-interaction=nonstopmode",
                 "-synctex=1",
                 "-cd",
-                "/data/main.tex"
+                "/data/${relativeFile}"
             ],
             "group": {
                 "kind": "build",
