@@ -9,14 +9,14 @@
                 "run",
                 "--rm",
                 "-v",
-                "${workspaceFolder}:/data",
+                "${fileDirname}:/data",
                 "texlive/texlive:latest", // Поменяли образ на официальный
                 "latexmk",
                 "-pdf",
                 "-interaction=nonstopmode",
                 "-synctex=1",
                 "-cd",
-                "/data/${relativeFile}"
+                "/data/${fileBasename}"
             ],
             "group": {
                 "kind": "build",
